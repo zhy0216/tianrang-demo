@@ -1,10 +1,17 @@
-import { Button, DatePicker, Space, Steps } from "antd";
+import { Button, DatePicker, Space, Steps, Divider } from "antd";
+import { Comment, Donation } from "../components";
 
 export default function Home() {
   const description = "This is a description.";
 
   return (
     <>
+      <Comment />
+      <Divider />
+
+      <Donation />
+      <Divider />
+
       <Steps
         direction="vertical"
         size="small"

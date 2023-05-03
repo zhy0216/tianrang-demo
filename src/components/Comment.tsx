@@ -9,7 +9,8 @@ const ZeroPrefix = (
     0
   </Avatar>
 );
-export default function Comment() {
+
+export function Comment() {
   const [canPost, setCanPost] = useState(false);
 
   return (
