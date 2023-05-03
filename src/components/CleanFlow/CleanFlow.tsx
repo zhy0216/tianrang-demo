@@ -1,28 +1,28 @@
 import { Steps } from "antd";
-import { FlowNode } from "@demo/components";
+import { FlowNode } from "./types";
+import { FlowNodeTitle } from "./FlowNodeTitle";
+import styled from "@emotion/styled";
 
 interface Props {
   flowNodes: FlowNode[];
 }
 
-export function CleanFlow(props: Props) {
+const StyledSteps = styled(Steps)`
+  .ant-steps-item-title {
+    width: 400px;
+  }
+`;
+
+export function CleanFlow({ flowNodes }: Props) {
   return (
-    <Steps
+    <StyledSteps
       progressDot
       direction="vertical"
       size="small"
       current={0}
-      items={[
-        { title: "Finished", description: "11" },
-        {
-          title: "In Progress",
-          description: "111",
-        },
-        {
-          title: "Waiting",
-          description: "11",
-        },
-      ]}
+      items={flowNodes.map((flowNode) => ({
+        title: <FlowNodeTitle flowNode={flowNode} />,
+      }))}
     />
   );
 }
