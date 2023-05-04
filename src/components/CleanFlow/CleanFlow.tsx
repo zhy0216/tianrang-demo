@@ -16,6 +16,12 @@ const StyledSteps = styled(Steps)`
   .ant-steps-item-title {
     width: 100%;
   }
+
+  &&& .ant-steps-item-tail::after {
+    border: 1px dashed rgba(5, 5, 5, 0.06);
+    background: none;
+    width: 0;
+  }
 `;
 
 export function CleanFlow({ flowNodes }: Props) {
