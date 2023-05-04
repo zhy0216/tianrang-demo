@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <StyledContent>
         <h1>tianrang Demo </h1>
         <Row>
-          <Col span={8} offset={8}>
+          <Col span={16} offset={4}>
             <Component {...pageProps} />
           </Col>
         </Row>
